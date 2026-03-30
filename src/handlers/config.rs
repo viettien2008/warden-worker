@@ -41,7 +41,7 @@ pub async fn config(
         // Version history:
         // - Individual cipher key encryption: 2024.2.0
         // - Mobile app support for MasterPasswordUnlockData: 2025.8.0
-        "version": "2025.12.0",
+        "version": "2026.1.1",
         "gitHash": "5d84f176",
         "server": {
           "name": "Vaultwarden",

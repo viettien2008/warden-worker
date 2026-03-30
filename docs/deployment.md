@@ -59,7 +59,7 @@ This page covers the two deployment paths. Pick the one that fits your workflow 
 
    ```bash
    # Default pinned version (override by exporting BW_WEB_VERSION)
-   BW_WEB_VERSION="${BW_WEB_VERSION:-v2025.12.0}"
+   BW_WEB_VERSION="${BW_WEB_VERSION:-v2026.1.1}"
    if [ "${BW_WEB_VERSION}" = "latest" ]; then
      BW_WEB_VERSION="$(curl -s https://api.github.com/repos/dani-garcia/bw_web_builds/releases/latest | jq -r .tag_name)"
    fi
@@ -156,8 +156,8 @@ You can pin/override the bundled Web Vault (bw_web_builds) version via GitHub Ac
 
 | Variable | Applies to | Default | Example | Notes |
 |----------|------------|---------|---------|-------|
-| `BW_WEB_VERSION` | prod (`main/uat/release*`) | `v2025.12.0` | `v2025.12.0` | Set to `latest` to follow upstream latest release |
-| `BW_WEB_VERSION_DEV` | dev (`dev`) | `v2025.12.0` | `v2025.12.0` | Set to `latest` to follow upstream latest release |
+| `BW_WEB_VERSION` | prod (`main/uat/release*`) | `v2026.1.1` | `v2026.1.1` | Set to `latest` to follow upstream latest release |
+| `BW_WEB_VERSION_DEV` | dev (`dev`) | `v2026.1.1` | `v2026.1.1` | Set to `latest` to follow upstream latest release |
 
 #### Global Equivalent Domains
 
