@@ -15,7 +15,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Sync Upstream
-        uses: aormsby/Fork-Sync-Action@v3.4
+        uses: aormsby/fork-sync-action@v3.4
         with:
           target_sync_branch: main
           upstream_repository: qaz741wsd856/warden-worker
