@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout target repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
@@ -24,3 +24,4 @@ jobs:
           git checkout main
           git merge upstream/main --allow-unrelated-histories -m "Chore: Auto sync fork from upstream"
           git push origin main
+  
