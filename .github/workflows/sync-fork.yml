@@ -13,11 +13,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
-      - name: Sync Upstream
-        uses: aormsby/fork-sync-action@v3.4
-        with:
-          target_sync_branch: main
-          upstream_repository: qaz741wsd856/warden-worker
-          upstream_branch: main
-          force: false
+      - name: Sync from Upstream
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote add upstream https://github.com/qaz741wsd856/warden-worker.git
+          git fetch upstream main
+          git checkout main
+          git merge upstream/main --allow-unrelated-histories -m "Chore: Auto sync fork from upstream"
+          git push origin main
